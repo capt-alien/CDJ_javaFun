@@ -24,7 +24,10 @@ public class StringManipulator{
         }
     }
     // Concat Substring
-    public String ConcatSubstring(String, int, int, String){
-
+    public String ConcatSubstring(String strA, int x, int y , String strB){
+        String a =straA.substring(x);
+        String b = strB.substring(y);
+        String c = a.concat(b);
+        return c; 
     }
 }

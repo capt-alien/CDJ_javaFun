@@ -58,13 +58,68 @@ public class Basics{
     }
 
     // Greater Than Y
+    public static ArrayList<Integer> greaterThanY(int[] arr, int y){
+        ArrayList<Integer> lista = new ArrayList<Integer>();
+        for (int i= 0; i< arr.length; i++){
+            if(arr[i]>y){
+                lista.add(arr[i]);
+            }
+        }
+        return lista;
+    }
 
-    // Square the values
+    // Square the values\
+    public static int[] sqval(int[] arr){
+        int[] rtnArr;
+        rtnArr = new int[arr.length];
+        for(int i=0; i<arr.length; i++){
+            rtnArr[i]=arr[i]*arr[i];
+        }
+        return rtnArr;
+    }
 
     // ELIMINATE NEGIIVE
+    public static int[] noNeg(int[] arr){
+        int[] nonegarr;
+        nonegarr = new int[arr.length];
+        for (int i=0; i< arr.length; i++){
+            if (arr[i] > 0){
+                nonegarr[i] = arr[i];
+            } else{
+                nonegarr[i] = 0;
+            }
+        }
+        return nonegarr;
+    }
 
     // Max, Min, and Average
+    public static int[] mma(int[] arr){
+        int total = arr[0];
+        int max = arr[0];
+        int min = arr[0];
+        for(int i=1; i<arr.length; i++){
+            total += arr[i];
+            if (arr[i] > max){
+                max = arr[i];
+            }
+            else if (arr[i]< min){
+                min = arr[i];
+            }
+        }
+        int[] returner = {max, min, total/arr.length};
+        return returner;
+    }
 
     // Shifting the Values in the Array
+    public static int[] shifty(int[] arr){
+        int[] mcShiftFace;
+        mcShiftFace = new int[arr.length];
+        for(int i=0; i < arr.length-1; i++ ){
+            mcShiftFace[i] = arr[i+1];
+        }
+        mcShiftFace[arr.length-1] = 0;
+        return mcShiftFace;
+    }
+
 
 }

@@ -8,7 +8,7 @@ public class StringManipulator{
     }
     // Get Index or Null
     public Integer getIndexOrNUll(String str, char n){
-        Integer x = str.indexof(n);
+        Integer x = str.indexOf(n);
         if(x == -1){
             return null;
         } else{
@@ -16,7 +16,7 @@ public class StringManipulator{
         }
     }
     public Integer getIndexOrNull(String strA, String strB){
-        Integer x = strA.indexof(strB);
+        Integer x = strA.indexOf(strB);
         if(x == -1){
             return null;
         } else{
@@ -25,9 +25,9 @@ public class StringManipulator{
     }
     // Concat Substring
     public String ConcatSubstring(String strA, int x, int y , String strB){
-        String a =straA.substring(x);
+        String a =strA.substring(x);
         String b = strB.substring(y);
         String c = a.concat(b);
-        return c; 
+        return c;
     }
 }
